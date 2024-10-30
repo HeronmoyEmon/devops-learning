@@ -12,3 +12,16 @@
 - Always compares to the previous commit to track changes
 - While deploying use the commit hash for versioning (build number)
 - Can add empty commit without staging any change
+
+## **Class 2 - 30-10-2024 - GIT**
+
+- add git commit description : git commit -m "commit message" -m "description"
+- git commit --amend (update last commit)
+- git reset HEAD~1 (delete last commit but keep as unstaged)
+- git reset --mixed HEAD~N (delete upto N commits and keep changes unstaged, --mixed is default. can be skipped for default behavior)
+- git reset --soft HEAD~N (deletes commit but changes are staged)
+- git reset --hard HEAD~N (deletes the local changes as well as the commit)
+- git rebase -i HEAD~N (manipulate previous commits)
+- sets the HEAD temporarily to the commit
+- git rebasing follows commit order
+- git squash (amend to a particular commit)
