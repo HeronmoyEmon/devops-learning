@@ -15,33 +15,46 @@
 
 ## **Class 2 - 30-10-2024 - GIT**
 
-- add git commit description  
-```sh 
-  git commit -m "commit message" -m "description"
-```
-- update last commit
+add git commit description
+
 ```sh
-  git commit --amend
+git commit -m "commit message" -m "description"
 ```
-- delete last commit but keep as unstaged
-```sh 
-  git reset HEAD~1
-```
-- delete upto N commits and keep changes unstaged, --mixed is default. can be skipped for default behavior
-```sh 
-  git reset --mixed HEAD~N
-```
-- deletes commit but changes are staged
-```sh 
-  git reset --soft HEAD~N
-```
-- deletes the local changes as well as the commit
+
+update last commit
+
 ```sh
-  git reset --hard HEAD~N
+git commit --amend
 ```
-- manipulate previous commits (sets the HEAD temporarily to the commit)
-```sh 
-  git rebase -i HEAD~N
+
+delete last commit but keep as unstaged
+
+```sh
+git reset HEAD~1
+```
+
+delete upto N commits and keep changes unstaged, --mixed is default. can be skipped for default behavior
+
+```sh
+git reset --mixed HEAD~N
+```
+
+deletes commit but changes are staged
+
+```sh
+git reset --soft HEAD~N
+```
+
+deletes the local changes as well as the commit
+
+```sh
+git reset --hard HEAD~N
+```
+
+manipulate previous commits (sets the HEAD temporarily to the commit)
+
+```sh
+git rebase -i HEAD~N
 ```
 
 - git rebasing follows commit order
@@ -52,19 +65,33 @@
 - Git rebase : merge commit by commit (unsquashed)
 - Git squash before merge : conflicting commit unfoundable as all commits are squashed into single commit
 - Rebase any branch with master : Git stashes & dumps commits one by one into master (a loop)
+- tracks all action
+```sh
+  git reflog
+```
+- short command for checkout
+```sh
+  git co <branch-name>
+```
 - Undo any git action
-- git reflog (tracks all action)
-- git co (short command for checkout) master
-- git reset HEAD@{N}
+```sh
+  git reset HEAD@{N}
+```
 - **git rebasing with reflog not clear**
 - Forking (copy someone's code)
   - zip download
   - clone (includes the .git file)
   - fork (create a replica with my origin)
-- git remote -v
-- git remote add origin/jesse/rizwan
-- git fetch jesse/master
-- git checkout rizwan/master
-- git rebase jesse/master
-- git revert HEAD~N (delete the commit and add new commit)
-- difference between reset & revert
+
+```sh
+  git remote -v
+  git remote add origin/jesse/rizwan
+  git fetch jesse/master
+  git checkout rizwan/master
+  git rebase jesse/master
+```
+### Difference between `reset` & `revert`
+delete the commit and add new commit
+```sh
+  git revert HEAD~N 
+```
