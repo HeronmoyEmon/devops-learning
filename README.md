@@ -15,14 +15,35 @@
 
 ## **Class 2 - 30-10-2024 - GIT**
 
-- add git commit description : git commit -m "commit message" -m "description"
-- git commit --amend (update last commit)
-- git reset HEAD~1 (delete last commit but keep as unstaged)
-- git reset --mixed HEAD~N (delete upto N commits and keep changes unstaged, --mixed is default. can be skipped for default behavior)
-- git reset --soft HEAD~N (deletes commit but changes are staged)
-- git reset --hard HEAD~N (deletes the local changes as well as the commit)
-- git rebase -i HEAD~N (manipulate previous commits)
-- sets the HEAD temporarily to the commit
+- add git commit description  
+```sh 
+  git commit -m "commit message" -m "description"
+```
+- update last commit
+```sh
+  git commit --amend
+```
+- delete last commit but keep as unstaged
+```sh 
+  git reset HEAD~1
+```
+- delete upto N commits and keep changes unstaged, --mixed is default. can be skipped for default behavior
+```sh 
+  git reset --mixed HEAD~N
+```
+- deletes commit but changes are staged
+```sh 
+  git reset --soft HEAD~N
+```
+- deletes the local changes as well as the commit
+```sh
+  git reset --hard HEAD~N
+```
+- manipulate previous commits (sets the HEAD temporarily to the commit)
+```sh 
+  git rebase -i HEAD~N
+```
+
 - git rebasing follows commit order
 - git squash (amend to a particular commit)
 
